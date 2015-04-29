@@ -3,7 +3,8 @@
 <p>An innovative system to compartmentalize and organize your medications</p>
 
 <% if user_signed_in? %>
-          <%= link_to "Let's get started", "#", class: "btn btn-primary btn-lg" %>
+          <%= link_to "Let's get started", input_path, class: "btn btn-primary btn-lg" %>
+          <br>
           <br>
      <% else %>
 <p>
