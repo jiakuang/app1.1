@@ -1,7 +1,17 @@
 <div class="jumbotron">
 <h1>CompactMeds</h1>
 <p>An innovative system to compartmentalize and organize your medications</p>
-<p><%= link_to "Let's start", "#", class: "btn btn-primary btn-lg" %></p>
+
+<% if user_signed_in? %>
+          <%= link_to "Let's get started", "#", class: "btn btn-primary btn-lg" %>
+          <br>
+     <% else %>
+<p>
+	<%= link_to "I'm new!", new_user_registration_path, class: "btn btn-default btn-lg" %>
+	<%= link_to "I'm back!", new_user_session_path, class: "btn btn-primary btn-lg" %>
+</p>
+<% end %>
+
 <br>
 <p>
 	<img src="http://www.jhsph.edu/sebin/p/e/medication-safety.jpg" alt="safety" height="200" width="25%">
