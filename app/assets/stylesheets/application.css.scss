@@ -21,4 +21,5 @@ $navbar-default-link-color: white;
  *= require bootstrap
  *= require_tree .
  *= require_self
+ *= require 'masonry/transitions'
  */
