@@ -7,7 +7,10 @@
     </div>
       </div>
       <div class="panel-body">
-        <p><%= @pin.description %></p>
+        <p><b><%= @pin.description %></b>
+        <br> 
+        <br><%= @pin.instructions %>
+        </p>
         
 
         <% if @pin.user == current_user %>
