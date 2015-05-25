@@ -1,9 +1,23 @@
 <div class="jumbotron">
-<p>We are a diverse pharmacy team with decades of combined experience. Using our knowledge from working in retail pharmacies, we've devised a system and web-based application for you to manage all your medications. It is user-friendly, easy to learn, and fun to try!</p>
-<select name="frequency" id="frequency">
-  <option value="1">once daily</option>
-  <option value="2">twice daily</option>
-  <option value="3">three times daily</option>
-</select>
+<h1>CompactMeds</h1>
+<p>An innovative system to compartmentalize and organize your medications</p>
 
+<% if user_signed_in? %>
+          <%= link_to "Let's get started", new_pin_path, class: "btn btn-primary btn-lg" %>
+          <br>
+          <br>
+     <% else %>
+<p>
+    <%= link_to "I'm new!", new_user_registration_path, class: "btn btn-default btn-lg" %>
+    <%= link_to "I'm back!", new_user_session_path, class: "btn btn-primary btn-lg" %>
+</p>
+<% end %>
+
+<br>
+<p>
+    <img src="http://www.jhsph.edu/sebin/p/e/medication-safety.jpg" alt="safety" height="200" width="25%">
+    <img src="http://www.apotheka.com/gestor/ArchivosDeUsuario/image/4.jpg" alt="diverse" height="200" width="25%">
+    <img src="http://cdn3.collective-evolution.com/assets/uploads/2015/02/Adult-Vaccine.jpg" alt="vaccine" height="200" width="25%">
+    <img src="http://4.bp.blogspot.com/_mIDxsiKmEL8/TMxRKW4Qc2I/AAAAAAAABQ4/_MIKpEwUprA/s320/Caduceus1.jpg" alt="harm" height="200" width="20%">
+</p>
 </div>
